@@ -1,0 +1,33 @@
+<link rel="import" href="../polymer/polymer.html">
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <display-year></display-year>
+
+@element display-year
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://polymerlabs.github.io/display-year
+-->
+<polymer-element name="display-year">
+  <template>
+    <link rel="stylesheet" href="display-year.css" />
+    <h1>{{currentYear}}</h1>
+  </template>
+  <script>
+    Polymer({
+      /**
+       * The `author` attribute sets an initial author
+       * @attribute author
+       * @type string
+       * @default 'Sandeep Patel'
+       */
+      author: 'Sandeep Patel',
+      ready: function() {
+        this.currentYear = new Date().getFullYear();
+      }
+    });
+  </script>
+</polymer-element>
